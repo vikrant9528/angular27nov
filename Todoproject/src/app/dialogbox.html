@@ -1,0 +1,37 @@
+<div style="text-align: center;" >
+    <h1>Edit details</h1>
+<form action="#">
+    <div style="margin: 20px;">
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name" [value]="data[0].name">
+    </div>
+    <div style="margin: 20px;" >
+        <label>Mobile Number</label>
+        <input type="number" placeholder="Enter your mobileNumber" [value]="data[0].number">
+    </div>
+    <div style="margin: 20px;">
+        <label>Email</label>
+        <input type="email" placeholder="Enter your Email" [value]="data[0].email">
+    </div>
+    <div style="margin: 20px;">
+        <label for="hobbies">Hobbies:</label>
+        <select name="hobbies" id="hobbies" [value]="data[0].hobbies">
+          <option value="singing">singing</option>
+          <option value="playing">playing</option>
+          <option value="writing">writing</option>
+          <option value="listening">listening</option>
+        </select>
+    </div>
+    <div style="margin: 20px;">
+        <label for="description">Review of W3Schools:</label>
+  
+        <textarea id="description" name="description" rows="4" cols="50" [value]="data[0].description">
+  
+  </textarea>
+      </div>
+  
+</form>
+<button class="dialog-btn" (click)="onCancel()">Back</button>
+<!-- <button class="dialog-btn" (click)="edit()">Submit</button> -->
+
+</div>

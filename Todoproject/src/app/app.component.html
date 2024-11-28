@@ -1,0 +1,173 @@
+<!-- <div class="main">
+  <h1>Todo Items</h1>
+  <div class="button">
+    <button class="btn-primary" (click)="onadd()">Add Todo</button>
+    <button class="btn-secondary"(click)="ondelete()">Delete Todo</button>
+  </div>
+  <div class="todo-data">
+    <form [formGroup]="form" class="formset">
+      <label>Enter Name</label>
+      <-- https://plumsail.com/forms/templates/employee-registration-form/  -->
+<!-- <input type="text" formControlName="name" placeholder="enter your name" >
+
+      <label>Task to do</label>
+      <input type="text" formControlName="task" placeholder="enter task to do">
+
+      <label>Description</label>
+      <input type="text" formControlName="discription" placeholder="write something">
+    </form>
+    <p>{{data}}</p> -->
+<!-- <table>
+      <tr>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+      </tr>
+    </table> -->
+<!-- </div>
+</div> -->
+
+
+
+
+<!-- <div class="container">
+  <div class="header">
+    <span class="logo"><img src="../assets/images/download.png" alt="" width="70px" height="70px"></span>
+    <div class="content">
+      <h1>Student Registration Form</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quasi aut recusandae reprehenderit
+        exercitationem sapiente explicabo quae pariatur.</p>
+    </div>
+  </div>
+  <div class="form-section">
+    <form action="#" class="form" [formGroup]="form">
+      <div class="first">
+  
+        <h3 class="heading">Student information</h3>
+        <div class="form-data">
+          <input type="text" [placeholder]="input.placeholder" class="form-input" id="upper" [formControlName]="input.control" *ngFor="let input of formData;" [ngStyle]="{border: input.special ? '2px solid green' : '2px solid gray'}" [ngClass]="input.special ? 'special' : 'simple'"> 
+          <!-- <input type="text" placeholder="First Name" class="form-input" id="upper" formControlName="firstName"> 
+          <input type="text" placeholder="Middle Name" class="form-input" id="upper" formControlName="middleName">
+          <input type="text" placeholder="Last Name" class="form-input" id="upper" formControlName="lastName"> -->
+        <!-- </div> -->
+        <!-- <div class="form-data">
+          <input type="text" placeholder="Date of Birth" class="form-input" formControlName="dob">
+          <input type="text" placeholder="Student Id" class="form-input" formControlName="studentId">
+        </div>
+      </div>
+      <h3 class="heading">Address</h3>
+      <div class="first">
+        <div class="form-data">
+          <input type="text" placeholder="Street Address" class="form-input" id="address" formControlName="address">
+        </div>
+        <div class="form-data">
+          <input type="text" placeholder="City" class="form-input" formControlName="city">
+          <input type="text" placeholder="State/Province" class="form-input">
+        </div>
+        <div class="form-data">
+          <input type="text" placeholder="Country" class="form-input" formControlName="country">
+          <input type="text" placeholder="Zio code" class="form-input" >
+        </div>
+      </div>
+
+      <div class="first">
+        <h3 class="heading">Contact information</h3>
+        <div class="form-data">
+          <input type="text" placeholder="Email" class="form-input"  formControlName="email">
+          <input type="text" placeholder=" " class="form-input">
+        </div>
+      </div>
+
+    </form>
+  </div>
+  <button class="btn-primary" (click)="submit()">Submit</button>
+</div>
+<!-- <p *ngFor="let ss of datas">{{ss.firstName}}</p> -->
+ <!-- <div class="table">
+  <table border="2px solid black">
+    <tr>
+      <th>Name</th>
+      <th>Student if</th>
+      <th>Address</th>
+      <th>Email</th>
+    </tr>
+    <tr *ngFor="let data of datas">
+      <td>{{data.firstName}}</td>
+      <td>{{data.studentId}}</td>
+      <td>{{data.address}}</td>
+      <td>{{data.email}}</td>
+    </tr>
+  </table>
+ </div>  --> 
+
+
+<div class="main"> 
+ <div class="container">
+  <h1>Student Details</h1>
+  <form [formGroup]="form" class="form">
+    <div class="form-data">
+      <label>Name</label>
+      <input type="text" placeholder="Enter your name" formControlName="name" class="input-form">
+    </div>
+    <div class="form-data">
+      <label>Mobile Number</label>
+      <input type="number" placeholder="Enter mobile number" formControlName="number" class="input-form">
+    </div>
+    <div class="form-data">
+      <label>Email</label>
+      <input type="email" placeholder="Enter your email" formControlName="email" class="input-form">
+    </div>
+    <div class="form-data">
+      <label for="hobbies">Hobbies:</label>
+      <select name="hobbies" id="hobbies" formControlName="hobbies" class="input-form">
+        <option value="singing">singing</option>
+        <option value="playing">playing</option>
+        <option value="writing">writing</option>
+        <option value="listening">listening</option>
+      </select>
+    </div>
+    <div class="form-data">
+      <label for="description">Review of W3Schools:</label>
+
+      <textarea id="description" name="description" rows="4" cols="50" formControlName="description" class="input-form">
+
+</textarea>
+    </div>
+  </form>
+  <div class="form-btn">
+    <button class="btn-primary" (click)="submit()">Add</button>
+    <button class="btn-info" (click)="reset()">Reset</button>
+  </div>
+</div>
+  
+
+
+<div class="table-section">
+  <h1>User Data</h1>
+  <table class="table" style="width: 100%;" >
+    <tr class="trow">
+      <th>Name</th>
+      <th>Mobile Number</th>
+      <th rowspan="2">Email</th>
+      <th>Hobbies</th>
+      <th>Description</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let data of datas; let i = index" class="trow">
+      <td>{{data.name}}</td>
+      <td>{{data.number}}</td>
+      <td rowspan="2">{{data.email}}</td>
+      <td>{{data.hobbies}}</td>
+      <td>{{data.description}}</td>
+      <!-- <td><button class="btn-secondary" (click)="deleteItem(i)">Delete</button></td> -->
+      <td><img src="../assets/images/download (1).png" width="40px" height="40px" alt=""(click)="deleteItem(i)"> <img src="../assets/images/edit.png" width="40px" height="40px" (click)="editItem(i)">
+      </td>
+      <!-- <td><button class="btn-warning" (click)="editItem(i)">Edit</button></td> -->
+      <!-- <td><img src="../assets/images/edit.png" width="40px" height="40px" (click)="editItem(i)"></td> -->
+    </tr>
+  </table>
+</div>
+</div>
+ 
+<router-outlet></router-outlet>
